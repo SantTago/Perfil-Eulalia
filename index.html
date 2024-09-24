@@ -86,7 +86,7 @@
             padding-left: 15px;
             padding-top: 79px;
             display: flex;
-            width: 120px;
+            width: 90px;
             height: auto;
         }
 
@@ -139,6 +139,23 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
+        .contact-button1 {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 30px;
+            background: hsl(327, 100%, 43%);
+            color: #fff;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-button1:hover {
+            background: hsl(327, 100%, 31%);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
 
         .contact-button.call {
             background-color: #007bff;
@@ -159,7 +176,7 @@
         /* Estilo do rodapé */
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px 0px 30px 0px;
             position: relative;
             bottom: 0;
             width: 100%;
@@ -171,6 +188,14 @@
             margin: 0;
             color: #333;
         }
+        .logo1 img{
+            width: 100px;
+            height: 70px;
+            padding-top: -10px;
+            margin-top: -17px;
+        } 
+       
+                
     </style>
 </head>
 
@@ -206,23 +231,63 @@
         <div class="profile-image">
             <img src="perfil.png" alt="Dra. Eulália"> <!-- Substitua pelo caminho da imagem -->
         </div>
+        <div class="logo1">
+            <img src="logo1.png"> <!-- Substitua pelo caminho da imagem -->
+        </div>
 
         <!-- Informações do perfil -->
         <div class="profile-info">
-            <h1>Dra. Eulália</h1>
-            <p>🚼 Desenvolvimento Infantil</p>
-            <p>👶 Assimetria Craniana</p>
-            <p>💪 Fisio Neurofuncional</p>
-            <p>🌬️ Fisio Respiratório</p>
-            <p>➕ 10 anos tratando crianças</p>
+            <p>👶🔄 Assimetria Craniana / Torcicolo congênito</p>
+            <p>🚶‍♂️🦵 Fisioterapia Motora</p>
+            <p>💨🫁 Fisioterapia Respiratória</p>
+            <p>🦶📊 Análise da Pisada / Baropodometria</p>
+            <br>
+            <p>➕ 10 anos de experiência, promovemos saúde e desenvolvimento infantil!</p>
+           <br>
+            <hr>
+            <p>Promovendo Saúde e Desenvolvimento da Cabeça aos Pés do Seu Filho</p>
         </div>
 
+        
         <!-- Botões de contato -->
         <div class="buttons-container">
             <a href="tel:+5588992901543" class="contact-button call">Ligar para mim</a>
             <a href="https://wa.me/5588992901543" class="contact-button">Conversar pelo Zap</a>
+            <a href="https://www.instagram.com/eulalia_angelim/" class="contact-button1">Instagram</a>
             <a href="https://www.google.com/maps/dir/-2.9032448,-40.861696/centro+medico+de+camocim/@-2.901512,-40.8649452,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x7ebdb8021008ef9:0xb3d7b1a25595a20a!2m2!1d-40.8474942!2d-2.9008994?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D" class="contact-button location">Localização</a>
         </div>
+    </div>
+<!------------------------------------------------------->
+<style>
+    .audio-container {
+    background-color: hsl(327, 100%, 31%); /* Cor de fundo do contêiner */
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    }
+
+    button {
+        background-color: #ffcc00; /* Cor do botão de play */
+        color: #fff; /* Cor do texto do botão */
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #e6b800; /* Cor ao passar o mouse */
+    }
+</style>
+
+    <div class="audio-container">
+        <audio controls autoplay loop>
+            <source src="music.mp3" type="audio/mp3">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
     </div>
 
     <footer>
