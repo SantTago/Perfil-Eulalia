@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Eulália Angelim</title>
   <style>
     * {
@@ -13,6 +13,7 @@
 
     body, html {
       height: 100%;
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -25,24 +26,25 @@
       width: 100%;
       max-width: 500px;
       text-align: center;
+      padding: 10px;
     }
 
     .container img {
       width: 100%;
-      max-height: 100vh; /* Define uma altura máxima para evitar o corte em telas maiores */
-      object-fit: contain; /* Garante que a imagem se ajuste sem ser cortada */
+      max-height: 100vh;
+      object-fit: contain;
       border-radius: 30px;
       box-shadow: 3px 6px 14px 3px #00000073;
     }
 
     .buttons {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
       gap: 15px;
       position: absolute;
-      top: 65%; /* Ajusta a posição dos botões */
+      bottom: 10%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
       width: 80%;
     }
 
@@ -106,7 +108,7 @@
     @media (max-width: 768px) {
       .buttons {
         width: 90%;
-        top: 70%;
+        bottom: 12%;
       }
 
       .buttons a {
@@ -122,6 +124,7 @@
     @media (max-width: 480px) {
       .container {
         max-width: 90%;
+        padding: 5px;
       }
 
       .buttons a {
