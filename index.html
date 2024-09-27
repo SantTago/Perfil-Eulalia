@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Eulália Angelim</title>
   <style>
     * {
@@ -30,9 +29,10 @@
 
     .container img {
       width: 100%;
-      height: auto;
+      max-height: 100vh; /* Define uma altura máxima para evitar o corte em telas maiores */
+      object-fit: contain; /* Garante que a imagem se ajuste sem ser cortada */
       border-radius: 30px;
-      box-shadow: 3px 6px 14px 3px #00000073;;
+      box-shadow: 3px 6px 14px 3px #00000073;
     }
 
     .buttons {
@@ -40,7 +40,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 15px;
       position: absolute;
-      top: 65%; /* Ajusta a posição para mais abaixo */
+      top: 65%; /* Ajusta a posição dos botões */
       left: 50%;
       transform: translate(-50%, -50%);
       width: 80%;
@@ -50,11 +50,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #0C4F95; /* Cor inicial dos botões */
+      background-color: #0C4F95;
       color: #C69F30;
       border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra mais evidente */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
       font-size: 24px;
       transition: all 0.3s ease;
       text-decoration: none;
@@ -63,13 +63,12 @@
     }
 
     .buttons a:hover {
-      background-color: #C69F30; /* Cor ao passar o mouse */
+      background-color: #C69F30;
       color: #0C4F95;
-      transform: translateY(-5px); /* Efeito de "levantar" o botão */
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     }
 
-    /* Animação de onda ao clicar */
     .buttons a:active::after {
       content: '';
       position: absolute;
@@ -91,8 +90,8 @@
     }
 
     .buttons a i {
-      font-size: 30px; /* Ícones maiores */
-      animation: pulse 1.5s infinite ease-in-out; /* Animação de pulsação suave */
+      font-size: 30px;
+      animation: pulse 1.5s infinite ease-in-out;
     }
 
     @keyframes pulse {
@@ -100,14 +99,14 @@
         transform: scale(1);
       }
       50% {
-        transform: scale(1.2); /* Aumenta o ícone no meio da animação */
+        transform: scale(1.2);
       }
     }
 
     @media (max-width: 768px) {
       .buttons {
         width: 90%;
-        top: 70%; /* Ajuste de posição para telas menores */
+        top: 70%;
       }
 
       .buttons a {
@@ -117,6 +116,21 @@
 
       .buttons a i {
         font-size: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        max-width: 90%;
+      }
+
+      .buttons a {
+        padding: 12px;
+        font-size: 18px;
+      }
+
+      .buttons a i {
+        font-size: 20px;
       }
     }
   </style>
